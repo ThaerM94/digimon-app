@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Details</h1>
+    <div>
+        <h2><%=val.name%></h2>
+        <img src="<%=val.image%>" alt="">
+        <p><%=val.level%></p>
+        <button class="updatBtn">update</button>
+    </div>
+    <div>
+        <form action="/updat/<%=digimon.id%>?_method=put" method="POST">
+        <label>Name
+            <input type="text" value="<%val.name%>">
+        </label><br>
+        <label>image url
+        <input type="text" value="<%=val.image%>">
+     </label><br>
+     <label>level
+        <input type="text" value="<%=val.level%>">
+     </label>
+        </form>
+        <form action="/delete/<%=digimon.id%>?_method=delete" method="POST"></form>
+        <input type="submit" value="Delete this digimon" >
+    </div>
+
+</body>
+</html>
